@@ -52,7 +52,7 @@ function LayoutController:FixLayout(layout: UILayout, parentObjectOrSize: Scroll
 		parentAbsoluteSize = camera.ViewportSize
 	end
 
-	parentObjectOrSize.CanvasSize = UDim2.new(0, layout.AbsoluteContentSize.X, 0, layout.AbsoluteContentSize.Y)
+	parent.CanvasSize = UDim2.new(0, layout.AbsoluteContentSize.X, 0, layout.AbsoluteContentSize.Y)
 
 	if layout.ClassName == "UIGridLayout" then
 		addConstraint(layout, absoluteSizeFromUDim2(layout.CellSize, parentAbsoluteSize))
